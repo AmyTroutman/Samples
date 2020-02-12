@@ -39,14 +39,14 @@ namespace Checkers_Sample
         {
             // 1. Both the source position and the destination position must be integers between 0 and 7
             //Fill in the blanks in the logic
-            if (source.Row < 0 || source.Row > 7 || (______) < 0 || (______) > 7
-                || destination.Row < 0 || destination.Row > 7 || (______) < 0
-                || (______) > 7) return false;
+            if (source.Row < 0 || source.Row > 7 || (source.Column) < 0 || (source.Column) > 7
+                || destination.Row < 0 || destination.Row > 7 || (destination.Column) < 0
+                || (destination.Column) > 7) return false;
 
             // 2. The row distance between the destination position and the source position must be larger than 0 AND less than or equal to 2
             int rowDistance = Math.Abs(destination.Row - source.Row);
             // The above line of code finds the distance between the rows. Place a line of code that will do the same thing for the columns.
-
+            int colDistance = Math.Abs(destination.Column - source.Column);
 
             //Fill in the blanks in the logic..It might help to comment why you need each condition here.
                 //i.e. The line below checks to make sure that the checker cannot move in a straight line.
@@ -57,7 +57,7 @@ namespace Checkers_Sample
             if (rowDistance > 2) return (______);
 
             Checker c = board.GetChecker(source);
-            if (c == (______))  // this is no checker at the source position
+            if (c == (??))  // this is no checker at the source position
             {
                 return (______);
             }
