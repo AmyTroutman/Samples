@@ -154,7 +154,7 @@ namespace Checkers_Sample
 
 
             Console.WriteLine("Select a square to move to (Row, Column):");
-            string[] dest = (______); // I skipped user input validation here
+            string[] dest = (Console.ReadLine().Split(',')); // I skipped user input validation here
 
             // usually we need to check if src.Count==2 before we retrieve data src[0] and src[1]
             // you can add the check if you want to. Likewise, we usually check dest.Count==2 as well
@@ -170,7 +170,7 @@ namespace Checkers_Sample
             Checker srcChecker = (______) ;
 
             //2. If there is no checker at the source position notify the user of the error, then stop
-            if (srcChecker == (______) )
+            if (srcChecker == null )
             {
                 Console.WriteLine("Invalid source position, try again.");
             }

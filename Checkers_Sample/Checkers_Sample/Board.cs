@@ -43,9 +43,13 @@ namespace Checkers_Sample
             foreach (Checker c in checkers)
             {
                 //Fill in the blanks in the if statement below
-                if (c.Position.Row == (______) && c.Position.Column == (______))
+                if (c.Position.Row == source.Row && c.Position.Column == source.Column)
                 {
                     return c;
+                }
+                else
+                {
+                    Console.WriteLine("There's nothing there!");
                 }
             }
             //make sure all code paths return a value; what happens if the above condition is not met.  Can the method return a Checker?
@@ -62,9 +66,9 @@ namespace Checkers_Sample
         public void RemoveChecker(Checker checker)
         {
             //Fill in the blank in the logic
-            if (checker (___) null)
+            if (checker != null)
             {
-                //Remove the checker from our list of checkers.
+                RemoveChecker(checker);
             }
         }
 
